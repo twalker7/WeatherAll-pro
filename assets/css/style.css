@@ -1,0 +1,73 @@
+header{
+    text-align:center;
+}
+div{
+    border: black solid 1px;
+}
+.structure-div{
+    border: black 2px solid;
+    margin:20px;
+}
+  
+.row{
+     height: 800px;
+ }
+#city-panel{
+    height: 700px;
+    padding: 0;
+}
+#current-city-display{
+display: flex;
+flex-direction: column;
+}
+
+#forecast-chart-container{
+    height: 700px;
+}
+
+li{
+    margin:30px 30px 30px 0px;
+    list-style-type:none;
+    
+}
+
+.city-button{
+    width: 300px;
+}
+
+#search-button, input{
+    margin: 5px 40px;
+    width:300px;
+
+}
+
+#current-city-display{
+    height: 300px;
+} 
+
+#five-day-forecast-box{
+    height: 400px;
+   
+}
+#five-day-forecast-flexbox{
+    height: 300px; 
+     display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.forecast-day{
+    height: 250px;
+    width: 150px;
+    margin: 1px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+span{
+    border: red solid 1px;
+    margin: 10px;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherAll Pro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    
+    <header>
+        <h1> Weather Dashboard</h1>
+    </header>
+    <div class="container">
+        <div class="row">
+                <div class = "col-md-4 structure-div" id="city-panel-container">
+                    <h2> SEARCH FOR A CITY: </h2> 
+                    <input type="text" id="search-input"> 
+                    <br>
+                    <button type="submit" id="search-button" class="btn btn-primary">Search</button>
+                    <hr>
+                    <ul id="major-cities">
+                    <li>
+                        <button class="btn btn-secondary city-button" id="Los-Angeles">Los Angeles</button>
+                    </li>
+                    <li>
+                        <button class="btn btn-secondary city-button" id="San-Francisco">San Francisco</button>
+                    </li>
+                    <li>
+                        <button class="btn btn-secondary city-button" id="New York">New York</button>
+                    </li>
+                    <li>
+                        <button class="btn btn-secondary city-button" id="Chicago">Chicago</button>
+                    </li>
+                    <li>
+                        <button class="btn btn-secondary city-button" id="Austin">Austin</button>
+                    </li>
+                    <li>
+                        <button class="btn btn-secondary city-button" id="Seattle">Seattle</button>
+                    </li>
+                    <li>
+                        <button class="btn btn-secondary city-button" id="Atlanta">Atlanta</button>
+                    </li>
+                    <li>
+                        <button class="btn btn-secondary city-button" id="Denver">Denver</button>
+                    </li>
+                   </ul>
+                </div>
+                
+                <div class="col-md-7 structure-div" id="forecast-chart-container"> 
+                    <div class = "row" id = "current-city-display">
+                        <h3>SELECTED CITY --current Date -- weather condition symbol  </h3>
+                        <span id="current-temp">temp</span>
+                        <span id="current-wind">wind</span>
+                        <span id="current-humidity">humidity</span>
+                        <span id="current-UV">uv </span>
+
+
+                    </div>
+
+                    <!-- set of 5 forecasted days -->
+                    <div class ="" id="five-day-forecast-box"> 
+                        <h4>5 Day Forecast: </h4>
+                        <div id="five-day-forecast-flexbox"> 
+                            
+                        <!-- Day 1-->
+                            <div class="forecast-day" id="day1-forecast"> 
+                                <span class= "forecast-date"> Date</span>
+                                <img class="forecast-icon" src="https://via.placeholder.com/50"> 
+                                <span class="forecast-wind"> wind </span>
+                                <span class="forecast-humidity"> humidity</span>
+                                <span class="forecast-uv"> UV index</span>
+                            </div>
+                        <!-- Day 2-->
+                            <div class="forecast-day" id="day2-forecast"> 
+                                <span class= "forecast-date"> Date</span>
+                                <img class="forecast-icon" src="https://via.placeholder.com/50"> 
+                                <span class="forecast-wind"> wind </span>
+                                <span class="forecast-humidity"> humidity</span>
+                                <span class="forecast-uv"> UV index</span>
+                            </div>
+
+                        <!-- Day 3-->
+                            <div class="forecast-day" id="day3-forecast">
+                                <span class= "forecast-date"> Date</span>
+                                <img class="forecast-icon" src="https://via.placeholder.com/50"> 
+                                <span class="forecast-wind"> wind </span>
+                                <span class="forecast-humidity"> humidity</span>
+                                <span class="forecast-uv"> UV index</span>
+                            </div>
+
+                        <!-- Day 4-->
+                            <div class="forecast-day" id="day4-forecast"> 
+                                <span class= "forecast-date"> Date</span>
+                                <img class="forecast-icon" src="https://via.placeholder.com/50"> 
+                                <span class="forecast-wind"> wind </span>
+                                <span class="forecast-humidity"> humidity</span>
+                                <span class="forecast-uv"> UV index</span>
+                            </div>
+
+                        <!-- Day 5-->
+                            <div class="forecast-day" id="day5-forecast"> 
+                                <span class= "forecast-date"> Date</span>
+                                <img class="forecast-icon" src="https://via.placeholder.com/50"> 
+                                <span class="forecast-wind"> wind </span>
+                                <span class="forecast-humidity"> humidity</span>
+                                <span class="forecast-uv"> UV index</span>
+                            </div>
+                        </div>
+                        
+                    
+                    </div>
+
+                </div>
+               
+        </div>
+    </div>
+        
+    
+    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
