@@ -1,8 +1,9 @@
 //search button 
+var citiesCollection = []; 
 $(".col-md-4 #search-button").click(function(){
  console.log("search button clicked -- should trigger a fetch request"); 
  var searchInput = $("#search-input").val();
- 
+    
 
 
     //initial fetch request to retrieve lat and lon 
@@ -23,7 +24,7 @@ $(".col-md-4 #search-button").click(function(){
             //current date established 
             var currentDate = moment().format("M/D/yyyy");
             $("#current-city-day").html(searchInput + " " + currentDate);
-            alert(currentDate);
+           
             //current weatherer 
  
           //values from current city loaded in
@@ -32,9 +33,12 @@ $(".col-md-4 #search-button").click(function(){
           $("#current-humidity").html("Humidity: " + obj1.current.humidity + " %")
           $("#current-UV").html("UV index: " +obj1.current.uvi)
         var currentConditions = $("<img>").attr("src", "http://openweathermap.org/img/w/" + obj1.current.weather[0].icon + ".png");
-          $("#current-city-info").append(currentConditions);
+          if(! $("current-city-info").children){
+              $("#current-city-info").append(currentConditions);
+          }
+        
           currentConditions.attr("class", "")
-          //color organizing the UV index display
+          //color organizing the UV index display -- could be improved by background covering only the number displayed
           if(obj1.current.uvi < 5){
               $("#current-UV").attr("style", "background-color: green");
           }else if(obj1.current.uvi < 8){
@@ -44,8 +48,7 @@ $(".col-md-4 #search-button").click(function(){
           }
          
           console.log($("#current.temp").val() + "value here? ")
-          console.log("OBJECT SWITCH")
-          
+        
           //5 day forecast info ---------- Hardcode each day of the 5 day forecast for simplicity 
            
            
@@ -94,24 +97,43 @@ $(".col-md-4 #search-button").click(function(){
            
 
         }); 
-        
-
-        
-        
+       
     });
+    var containsObject = (element, array)=>{
+        for(var i = 0; i < array.length; i++){
+            if(element === array[i]) {
+                return true;
+            }
+        }
+    
+        return false;
+    }
+    if(citiesCollection.length < 8){
+        if(!containsObject(searchInput, citiesCollection) ){
+            var cityLog =  $("<button>").addClass("btn btn-secondary city-button");
+            var listItem = $("<li>").html(searchInput);  
+            listItem.append(cityLog);
+            $("#previous-cities").prepend(listItem);
+            citiesCollection.push( listItem.text());
+        }
+       
+    }else{
+        if(!containsObject(searchInput, citiesCollection) ){
+            citiesCollection.shift()
+            var cityLog =  $("<button>").addClass("btn btn-secondary city-button");
+            var listItem = $("<li>").html(searchInput);  
+            listItem.append(cityLog);
+            $("#previous-cities").prepend(listItem);
+            citiesCollection.push( listItem.text());
+        } 
+        //instead -- load the array based on conditions and then separatedly implement 
+    }
+    /*
+    for(var i =0; i < citiesCollection.length; i++){
+
+    }
+    */  
 }); 
-
-
-
-
-
-
-
- 
- 
- 
-
-
 
 
 
@@ -120,6 +142,8 @@ $(".col-md-4 #search-button").click(function(){
 //city-buttons should be created after each search button click, storing up to 8 searches
 $(".city-button").click(function(){
     console.log("button clicked: " + $(this).attr("id") + "-- should trigger fetch request for specific city name (pass ID)");
+
+    // otherfetch request shouls go here 
 });
 
 // make a function to store the last 8 searched cities in 
