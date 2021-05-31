@@ -12,11 +12,11 @@
 <body>
     
     <header>
-        <h1> Weather Dashboard</h1>
+        <h1> WeatherAll Dashboard</h1>
     </header>
-    <div class="container">
+    <div class="container structure-div" id="app-container">
         <div class="row">
-                <div class = "col-md-4 structure-div" id="city-panel-container">
+                <div class = "col-md-4 " id="city-panel-container">
                     <h2> SEARCH FOR A CITY: </h2> 
                     <input type="text" id="search-input"> 
                     <br>
@@ -52,13 +52,13 @@
                 
                 <div class="col-md-7 structure-div" id="forecast-chart-container"> 
                     <div class = "row" id = "current-city-display">
-                        <h3>SELECTED CITY --current Date -- weather condition symbol  </h3>
-                        <span id="current-temp">temp</span>
-                        <span id="current-wind">wind</span>
-                        <span id="current-humidity">humidity</span>
-                        <span id="current-UV">uv </span>
-
-
+                        <div id="current-city-info">
+                            <h3 id="current-city-day"> </h3>
+                        </div>
+                        <span class="current-day-fields" id="current-temp">Temp:</span>
+                        <span class="current-day-fields" id="current-wind">Wind:</span>
+                        <span class="current-day-fields" id="current-humidity">Humidity:</span>
+                        <span class="current-day-fields" id="current-UV">UV Index: </span>
                     </div>
 
                     <!-- set of 5 forecasted days -->
@@ -68,8 +68,9 @@
                             
                         <!-- Day 1-->
                             <div class="forecast-day" id="day1-forecast"> 
-                                <span class= "forecast-date"> Date</span>
-                                <img class="forecast-icon" src="https://via.placeholder.com/50"> 
+                                <span class= "forecast-date"> Date</span> 
+                                <img class="forecast-icon" src="https://via.placeholder.com/50">
+                                <span class="forecast-temp"> Temp</span> 
                                 <span class="forecast-wind"> wind </span>
                                 <span class="forecast-humidity"> humidity</span>
                                 <span class="forecast-uv"> UV index</span>
@@ -77,7 +78,8 @@
                         <!-- Day 2-->
                             <div class="forecast-day" id="day2-forecast"> 
                                 <span class= "forecast-date"> Date</span>
-                                <img class="forecast-icon" src="https://via.placeholder.com/50"> 
+                                <img class="forecast-icon" src="https://via.placeholder.com/50">
+                                <span class="forecast-temp"> Temp</span>
                                 <span class="forecast-wind"> wind </span>
                                 <span class="forecast-humidity"> humidity</span>
                                 <span class="forecast-uv"> UV index</span>
@@ -85,8 +87,9 @@
 
                         <!-- Day 3-->
                             <div class="forecast-day" id="day3-forecast">
-                                <span class= "forecast-date"> Date</span>
-                                <img class="forecast-icon" src="https://via.placeholder.com/50"> 
+                                <span class= "forecast-date"> Date</span> 
+                                <img class="forecast-icon" src="https://via.placeholder.com/50">
+                                <span class="forecast-temp"> Temp</span> 
                                 <span class="forecast-wind"> wind </span>
                                 <span class="forecast-humidity"> humidity</span>
                                 <span class="forecast-uv"> UV index</span>
@@ -94,8 +97,9 @@
 
                         <!-- Day 4-->
                             <div class="forecast-day" id="day4-forecast"> 
-                                <span class= "forecast-date"> Date</span>
-                                <img class="forecast-icon" src="https://via.placeholder.com/50"> 
+                                <span class= "forecast-date"> Date</span> 
+                                <img class="forecast-icon" src="https://via.placeholder.com/50">
+                                <span class="forecast-temp"> Temp</span> 
                                 <span class="forecast-wind"> wind </span>
                                 <span class="forecast-humidity"> humidity</span>
                                 <span class="forecast-uv"> UV index</span>
@@ -103,8 +107,9 @@
 
                         <!-- Day 5-->
                             <div class="forecast-day" id="day5-forecast"> 
-                                <span class= "forecast-date"> Date</span>
-                                <img class="forecast-icon" src="https://via.placeholder.com/50"> 
+                                <span class= "forecast-date"> Date</span> 
+                                <img class="forecast-icon" src="https://via.placeholder.com/50">
+                                <span class="forecast-temp"> temp</span> 
                                 <span class="forecast-wind"> wind </span>
                                 <span class="forecast-humidity"> humidity</span>
                                 <span class="forecast-uv"> UV index</span>
