@@ -206,7 +206,6 @@ $("#previous-cities").on("click", ".city-button", function(){
         
           //5 day forecast info -------
            
-           
 
             //day 1 
           $("#day1-forecast .forecast-date" ).html(moment().add(1,"days").format("M/D/yyyy"));
