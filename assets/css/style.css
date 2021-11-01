@@ -9,10 +9,10 @@ header{
     text-align:center;
 }
 div{
-    border: black solid 0px;
+    border: rgb(176, 22, 22) solid 0px;
 }
 .structure-div{
-    border: black 5px solid;
+    border: rgb(84, 177, 152) 5px solid;
     margin:20px;
     border-radius: 15px;
 }
