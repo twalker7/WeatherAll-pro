@@ -19,7 +19,7 @@ div{
     border: rgb(176, 22, 22) solid 0px;
 }
 .structure-div{
-    border: rgb(84, 177, 152) 5px solid;
+    border: rgb(255, 255, 255, .5) 5px solid;
     margin:20px;
     border-radius: 15px;
 }
