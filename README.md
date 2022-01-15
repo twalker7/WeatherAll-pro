@@ -10,7 +10,7 @@
 
  ### Snapshot
 
-![](screenshot1.png)
+![](screenshot.png)
 
 
 
